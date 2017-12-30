@@ -50,7 +50,7 @@ public class DevVantiqTest extends utility {
 	
 	@Test ( priority =0 )
 	public void findRecord() throws InterruptedException {
-		 vantiq.baseURL();
+		vantiq.baseURL();
 		vantiq.loginVantiq();
 		Thread.sleep(1000);
 		linkObject.linkObjectItems("Data");
@@ -80,6 +80,7 @@ public class DevVantiqTest extends utility {
 		 subscription.createNewsubscriptions();
 	    		
 	}
+
 
 	@AfterMethod
 	public void afterMethod() throws InterruptedException {
