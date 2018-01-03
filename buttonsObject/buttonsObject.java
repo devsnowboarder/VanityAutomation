@@ -11,5 +11,10 @@ public class buttonsObject extends utility {
 		Thread.sleep(1000);
 		driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
 	}
+	
+	public void buttonName (String buttonName) throws InterruptedException {
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("#"+buttonName)).click();
+	}
 
 }

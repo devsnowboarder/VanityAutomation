@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import VantiqTest.utility;
 import findRecord.findRecords;
 import subscription.subscriptions;
+import addRecord.addRecord;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,9 @@ public class DevVantiqTest extends utility {
 	
 	findRecords findRecord = new findRecords();
 	subscriptions subscription = new subscriptions();
+	addRecord addRecordPage = new addRecord();
+	
+	
 	
 	
 
@@ -48,17 +52,15 @@ public class DevVantiqTest extends utility {
 		
 	}
 	
-	@Test ( priority =0 )
+/*	@Test ( priority =0 )
 	public void findRecord() throws InterruptedException {
 		vantiq.baseURL();
 		vantiq.loginVantiq();
 		Thread.sleep(1000);
 		linkObject.linkObjectItems("Data");
-	    findRecord.findRecords();		
-		
+	    findRecord.findRecords();				
 	}
-	
-
+*/	
 	@Test ( priority =1 )
 	public void addRecord() throws InterruptedException {
 		
@@ -66,11 +68,12 @@ public class DevVantiqTest extends utility {
 		 vantiq.loginVantiq();
 		 linkObject.linkObjectItems("Data");
 		 linkObject.linkObjectItems("Add Record");  
+		 addRecordPage.addRecord();
 	    		
 	}
 	
 		
-	@Test ( priority =2 )
+	/*@Test ( priority =2 )
 	public void subscriptions() throws InterruptedException {
 		
 		 vantiq.baseURL();
@@ -80,7 +83,7 @@ public class DevVantiqTest extends utility {
 		 subscription.createNewsubscriptions();
 	    		
 	}
-
+*/
 
 	@AfterMethod
 	public void afterMethod() throws InterruptedException {
